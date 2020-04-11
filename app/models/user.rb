@@ -12,4 +12,22 @@ class User < ApplicationRecord
 
   has_many :frequests
   has_many :inverse_frequests, class_name: 'Frequest', foreign_key: 'friend_id'
+
+  def friends_list
+    friends_array = frequests.map {|f| f.friend if f.status}
+    friends_array + inverse_frequests.map {|f| f.user if f.status}
+  end
+
+  def pending_confirmations
+    frequests.map {|f| f.friend unless frequest.status}
+  end
+
+  def pending_requests
+    frequests.map {|f| f.user unless frequest.status}
+  end
+
+  def is_friend?(user)
+    friends_list.include?(user)
+  end
+
 end

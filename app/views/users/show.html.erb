@@ -1,5 +1,13 @@
 <section class="user-section">
   <h2><%= "Name: #{@user.name}" %></h2>
+  <span>
+    <% if current_user.is_friend?(@user)  %>
+      <%= button_to 'Friends' %>
+    <% elsif (current_user == @user) %>
+    <% else  %>
+      <%= button_to 'Invite to friendship', frequests_send_request_path(friend_id: @user.id), method:'post', remote: true %>
+    <% end %>
+  </span>
   <article class="timeline">
     <h3>Recent posts:</h3>
     <ul class="posts">
