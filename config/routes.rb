@@ -11,6 +11,8 @@ Rails.application.routes.draw do
   end
 
   post 'frequests/send_request'
+  patch 'frequests/accept_request'
+  delete 'frequests/reject_request'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
