@@ -1,13 +1,13 @@
 <section class="user-section">
   <h2><%= "Name: #{@user.name}" %></h2>
   <span>
-    <% if current_user.is_friend?(@user)  %>
+    <% if current_user.friend?(@user)  %>
       <%= button_to 'Friends' %>
     <% elsif (current_user == @user) %>
     <% else  %>
-      <% if current_user.is_friend_request_sent?(@user) %>
+      <% if current_user.friend_request_sent?(@user) %>
       <%= button_to 'Friend request already sent'  %>
-      <% elsif current_user.is_pending_request?(@user) %>
+      <% elsif current_user.pending_request?(@user) %>
       <%= button_to 'Accept Friend request', frequests_accept_request_path(friend: @user), method:'patch', remote: true  %> 
       <%= button_to 'Reject Friend request', frequests_reject_request_path(friend: @user), method:'delete', remote: true    %>
       <% else %>
