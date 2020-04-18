@@ -1,6 +1,6 @@
-FactoryGirl.define do
+FactoryBot.define do
   factory :post do
-    content {Faker::Lorem.sentence}
-    user { FactoryGirl.create(:user, name:"abcdef")}
+    content { Faker::Lorem.sentence }
+    user { FactoryBot.create(:user, name: 'abcdef') }
   end
 end

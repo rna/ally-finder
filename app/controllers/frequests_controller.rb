@@ -17,9 +17,9 @@ class FrequestsController < ApplicationController
     friend_request = current_user.inverse_frequests.find_by_user_id(@user)
     friend_request.status = true
     if friend_request.save
-      flash[:notice] = 'Friend request sent successfully'
+      flash[:notice] = 'Friend request accepted'
     else
-      flash[:error] = 'Error in sending Friend request'
+      flash[:error] = 'Error in accepting Friend request'
     end
     redirect_to '/users'
   end

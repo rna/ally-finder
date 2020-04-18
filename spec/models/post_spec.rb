@@ -3,11 +3,11 @@ require 'rails_helper'
 RSpec.describe Post, type: :model do
   describe 'validations' do
     it { should validate_presence_of(:content) }
-    it { FactoryGirl.create(:post).should be_valid}
+    it { expect(FactoryBot.create(:post)).to be_valid }
 
-    it "should give error for more than 1000 chars" do
-      str = "a" * 1001
-      should_not allow_values(str).for(:content).with_message("1000 characters in post is the maximum allowed.")
+    it 'should give error for more than 1000 chars' do
+      str = 'a' * 1001
+      should_not allow_values(str).for(:content).with_message('1000 characters in post is the maximum allowed.')
     end
   end
 
