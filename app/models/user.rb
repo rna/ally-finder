@@ -14,8 +14,8 @@ class User < ApplicationRecord
   has_many :inverse_frequests, class_name: 'Frequest', foreign_key: 'friend_id'
 
   def friends_list
-    friends_array = frequests.map { |f| f.friend if f.status }
-    friends_array + inverse_frequests.map { |f| f.user if f.status }
+    friends_array = frequests.map { |f| f.friend if f.status }.compact
+    friends_array + inverse_frequests.map { |f| f.user if f.status }.compact
   end
 
   def pending_confirmations
