@@ -1,6 +1,18 @@
-# Scaffold for social media app with Ruby on Rails
+# Ally Finder - A Social networking app
 
-> This repo includes intial code for social media app with basic styling. Its purpose is to be a starting point for Microverse students.
+Building Ally Finder, a social networking app where users can send friendship requests to other users, write posts, comment and like others posts.
+
+## Table of Contents
+
+- [Built With](#built-with)
+- [Live Demo](#live-demo)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Run tests](#run-tests)
+- [Authors](#authors)
+<!-- - [Acknowledgements](#acknowledgements) -->
 
 ## Built With
 
@@ -9,8 +21,7 @@
 
 ## Live Demo
 
-TBA
-
+[Live Demo Link](https://ally-finder.herokuapp.com/)
 
 ## Getting Started
 
@@ -18,32 +29,47 @@ To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
-Ruby: 2.6.3
-Rails: 5.2.3
-Postgres: >=9.5
+- Windows
 
-### Setup
+```sh
+https://www.ruby-lang.org/es/documentation/installation/#rubyinstaller
+https://gorails.com/setup/windows/10
+```
+
+- Ubuntu 18.04
+
+```sh
+sudo apt-get install ruby-full
+gem install rails -v 5.2.4
+```
+<!-- ### Setup -->
+
+### Installation
+
+Clone the repo with:
+
+```sh
+git clone https://github.com/rna/ally-finder
+```
 
 Instal gems with:
 
-```
+```sh
 bundle install
 ```
 
 Setup database with:
 
-```
+```sh
    rails db:create
    rails db:migrate
 ```
-
-
 
 ### Usage
 
 Start server with:
 
-```
+```sh
     rails server
 ```
 
@@ -51,19 +77,19 @@ Open `http://localhost:3000/` in your browser.
 
 ### Run tests
 
-```
+```sh
     rpsec --format documentation
 ```
 
-> Tests will be added by Microverse students. There are no tests for initial features in order to make sure that students write all tests from scratch.
+<!-- ### Deployment -->
 
-### Deployment
+### Author
 
-TBA
+👤 **Ramesh Naidu Allu**
 
-## Authors
-
-TBA
+- Github: [@rna](https://github.com/rna)
+- Twitter: [@rnadev](https://twitter.com/rnadev)
+- Linkedin: [Linkedin](https://linkedin.com/in/rnadev)
 
 ## 🤝 Contributing
 
@@ -75,11 +101,12 @@ Feel free to check the [issues page](issues/).
 
 Give a ⭐️ if you like this project!
 
-## Acknowledgments
+<!-- ## Acknowledgments
 
-TBA
+- Hat tip to anyone whose code was used
+- Inspiration
+- etc -->
 
 ## 📝 License
 
-TBA
-
+This project is [MIT](lic.url) licensed.
