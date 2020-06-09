@@ -2,6 +2,9 @@
 
 Building Ally Finder, a social networking app where users can send friendship requests to other users, write posts, comment and like others posts.
 
+## Screenshot
+![User Page](https://i.imgur.com/9jqZU4Q.png)
+
 ## Table of Contents
 
 - [Built With](#built-with)
